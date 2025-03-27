@@ -9,9 +9,6 @@
                 <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-default">
                   <i class="nav-icon fas fa-plus"></i>  Tambah Data
                 </button>
-                <button type="button" class="btn btn-success swalDefaultSuccess">
-                  Launch Success Toast
-                </button>
                 <br><br>
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
@@ -134,7 +131,7 @@
                       $('#modal-default').modal('hide');
                         Toast.fire({
                           icon: 'success',
-                          title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+                          title: 'Tambah Data Telah Berhasil'
                         })
                         $('#form-tambah-data')[0].reset();
                         setTimeout(function() {

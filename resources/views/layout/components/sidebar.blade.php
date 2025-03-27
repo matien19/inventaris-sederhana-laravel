@@ -12,6 +12,12 @@
             'routeName' => 'products',
             'icon' => 'fas fa-th'
         ],
+        [
+            'name' => 'Transaksi',
+            'route' => '/transaksi',
+            'routeName' => 'transaksi',
+            'icon' => 'fas fa-cart-plus'
+        ],
     ];
 @endphp
 <div class="sidebar">
