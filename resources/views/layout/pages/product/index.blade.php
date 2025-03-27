@@ -29,7 +29,15 @@
                       <td>1</td>
                       <td>{{ $product->name }}</td>
                       <td>{{ $product->description }}</td>
-                      <td>{{ $product->sku }}</td>
+                      <td>
+                        {!! DNS2D::getBarcodeHTML( $product->sku, 'QRCODE') !!}
+                        <br>
+                        <hr>
+                        <br>
+                        {{-- {{ DNS1D::getBarcodeHTML('4445645656', 'PHARMA2T');}} --}}
+                        {{-- {{!! DNS2D::getBarcodePNGPath('4445645656', 'PDF417'); !!}} --}}
+                        {{ $product->sku }}
+                      </td>
                       <td>{{ $product->price }}</td>
                       <td>{{ $product->stock }}</td>
                       <td>{{ $product->category->name }}</td>
