@@ -7,17 +7,33 @@
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-lg-6">
-                        sadasd
-                    </div>
-                    <div class="col-lg-6">
-                        sdadas
+                    <div class="col-lg-12">
+                        <table id="example" class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                              <th>No</th>
+                              <th>No Transaksi</th>
+                              <th>Aksi</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach ($transaksi as $item)
+                            <tr>
+                              <td>{{ $loop->iteration; }}</td>
+                              <td>{{ $item->no_transaksi; }}</td>
+                              <td>
+                                <a href="/transaksi/detail/{{ $item->no_transaksi; }}" class="btn btn-primary btn-sm">Detail</a>
+                              </td>
+                            </tr>
+                            @endforeach
+                           
+                            
+                            </tbody>
+                          </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-  
-
   
 @endsection
